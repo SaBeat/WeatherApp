@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   var windSpeed;
 
   Future getWeather() async{
-    http.Response response=await http.get('http://api.openweathermap.org/data/2.5/weather?q=Sabirabad&appid=29a157ca62b332a350c1a49c542d092c');
+    http.Response response=await http.get('http://api.openweathermap.org/data/2.5/weather?q=Sabirabad&units=metric&appid=29a157ca62b332a350c1a49c542d092c');
     var results=jsonDecode(response.body);
     setState(() {
       this.temp=results['main']['temp'];
